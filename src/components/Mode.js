@@ -1,6 +1,7 @@
 import React from "react";
 import vsContext from "../context/vsContext";
 import { useContext } from "react";
+import "../css/Navbar.css";
 
 const Mode = () => {
   const context = useContext(vsContext);
@@ -15,9 +16,7 @@ const Mode = () => {
         onClick={toggleMode}
       />
       <label
-        className={`form-check-label text-${
-          mode === "light" ? "dark" : "light"
-        }`}
+        className={`form-check-label text-${mode === "light" ? "light" : ""}`}
         htmlFor="flexSwitchCheckDefault"
       >
         {mode === "light" ? "Enable" : "Disable"} Dark Mode
