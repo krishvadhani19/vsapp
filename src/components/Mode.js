@@ -7,7 +7,7 @@ const Mode = () => {
   const context = useContext(vsContext);
   const { toggleMode, mode } = context;
   return (
-    <div className="form-check form-switch">
+    <div className="form-check form-switch mx-2">
       <input
         className="form-check-input"
         type="checkbox"
@@ -16,7 +16,9 @@ const Mode = () => {
         onClick={toggleMode}
       />
       <label
-        className={`form-check-label text-${mode === "light" ? "light" : ""}`}
+        className={`form-check-label mx-1 text-${
+          mode === "light" ? "light" : ""
+        }`}
         htmlFor="flexSwitchCheckDefault"
       >
         {mode === "light" ? "Enable" : "Disable"} Dark Mode

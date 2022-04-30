@@ -4,6 +4,7 @@ import vsContext from "../context/vsContext";
 import { useContext } from "react";
 import "../css/Navbar.css";
 import { useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const context = useContext(vsContext);
@@ -17,9 +18,9 @@ const Navbar = () => {
           mode === "light" ? "dark" : ""
         } bg-${mode === "light" ? "dark" : ""}`}
       >
-        <div className="container-fluid" style={{ fontSize: "20px" }}>
-          <a className="navbar-brand" href="#">
-            Navbar
+        <div className="container-fluid" style={{ fontSize: "21px" }}>
+          <a className="navbar-brand" href="/">
+            vsApp
           </a>
           <div className="collapse navbar-collapse" id="navbarNavDropdown">
             <ul className="navbar-nav">
@@ -29,14 +30,24 @@ const Navbar = () => {
                     location.pathname === "/" ? "active" : ""
                   }`}
                   aria-current="page"
-                  href="#"
+                  href="/"
                 >
                   Home
                 </a>
               </li>
             </ul>
           </div>
+          {/* Toggle Mode */}
           <Mode />
+          {/* Buttons */}
+          <div className="d-flex mx-2">
+            <Link type="button" className="btn btn-primary mx-1" to="/login">
+              Login
+            </Link>
+            <Link type="button" className="btn btn-primary mx-1" to="/signup">
+              Signup
+            </Link>
+          </div>
         </div>
       </nav>
     </div>
