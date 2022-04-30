@@ -18,14 +18,14 @@ router.post(
     // just to acknowledge whether working smooth or not
     let success = false;
     const errors = validationResult(req);
-    if (errors) {
+    if (!errors.isEmpty()) {
       return res.status(400).json({ success, errors: errors.array() });
     }
 
     const { name, email, password } = req.body;
     try {
       let user = await User.findOne({ email });
-      if (!user) {
+      if (user) {
         res.status(401).json({
           success,
           error: "User with these credentials already exists!",
@@ -76,7 +76,7 @@ router.post(
 
     //
     const errors = validationResult(req);
-    if (errors) {
+    if (!errors.isEmpty()) {
       res.status(400).json({ success, errors });
     }
 

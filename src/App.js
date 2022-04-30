@@ -8,6 +8,8 @@ import {
   Route,
   useLocation,
 } from "react-router-dom";
+import Login from "./components/Login";
+import Signup from "./components/Signup";
 
 function App() {
   return (
@@ -19,6 +21,10 @@ function App() {
         <Routes>
           {/* Home */}
           <Route exact path="/" element={<Home />}></Route>
+          {/* Login */}
+          <Route exact path="/login" element={<Login />}></Route>
+          {/* Signup */}
+          <Route exact path="/signup" element={<Signup />}></Route>
         </Routes>
       </VSState>
     </Router>
