@@ -7,7 +7,7 @@ const Mode = () => {
   const context = useContext(vsContext);
   const { toggleMode, mode } = context;
   return (
-    <div className="form-check form-switch mx-2">
+    <div className="form-check form-switch">
       <input
         className="form-check-input"
         type="checkbox"

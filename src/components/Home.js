@@ -1,6 +1,10 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import VideoList from "./VideoList";
+import VideoDetail from "./VideoDetail";
+import YoutubeAPI from "./apis/YoutubeAPI";
+import Searchbar from "./Searchbar";
 
 const Home = () => {
   let navigate = useNavigate();
@@ -12,7 +16,35 @@ const Home = () => {
       navigate("/login");
     }
   }, []);
-  return <div className="container">Home</div>;
+
+  const [videos, setVideos] = useState([]);
+  const [selectedVideo, setSelectedVideo] = useState(null);
+
+  const handleSubmit = async (textFromSearchbar) => {
+    const response = await YoutubeAPI.get("/search", {
+      params: {
+        q: textFromSearchbar,
+      },
+    });
+    setVideos(response.data.items);
+  };
+
+  const handleVideoSelect = (video) => {
+    setSelectedVideo(video);
+  };
+  return (
+    <div className="container my-5">
+      <Searchbar handleFormSubmit={handleSubmit} />
+      <div className="d-flex flex-row">
+        <div className="flex-grow-2">
+          <VideoDetail video={selectedVideo} />
+        </div>
+        <div className="">
+          <VideoList videos={videos} handleVideoSelect={handleVideoSelect} />
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default Home;
