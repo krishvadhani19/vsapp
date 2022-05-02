@@ -1,4 +1,5 @@
 import React from "react";
+import "../css/youtube.css";
 
 const VideoDetail = ({ video }) => {
   if (!video) {
@@ -9,23 +10,21 @@ const VideoDetail = ({ video }) => {
 
   return (
     <div
-      className="my-5 mx-3 text-center"
-      style={{ padding: "10px", borderRadius: "5px", boxShadow: "1px 1px 4px" }}
+      className="my-5 mx-3 text-center iframe"
+      style={{
+        padding: "1rem",
+        borderRadius: "0.5rem",
+        boxShadow: "1px 1px 4px",
+      }}
     >
       <div>
-        <iframe
-          src={videoSrc}
-          allowFullScreen
-          title="Video Player"
-          width="400px"
-          height="200px"
-        ></iframe>
+        <iframe src={videoSrc} allowFullScreen title="Video Player"></iframe>
       </div>
       <div>
-        <h4 className="">
+        <div className="title">
           <strong>{video.snippet.title}</strong>
-        </h4>
-        <p>{video.snippet.description}</p>
+        </div>
+        <div className="description">{video.snippet.description}</div>
       </div>
     </div>
   );

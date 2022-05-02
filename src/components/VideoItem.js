@@ -1,23 +1,24 @@
 import React from "react";
+import "../css/youtube.css";
 
 const VideoItem = ({ video, handleVideoSelect }) => {
   return (
     <div
+      className="mx-auto my-3 p-3 d-flex videoItem"
       onClick={() => {
         handleVideoSelect(video);
       }}
       style={{
-        padding: "10px",
         borderRadius: "5px",
         boxShadow: "1px 1px 4px",
+        // width: "80vw",
       }}
-      className="text-center my-5"
     >
       <img
         src={video.snippet.thumbnails.medium.url}
         alt={video.snippet.description}
       />
-      <div className="">
+      <div className="m-auto mx-2 my-1">
         <strong>{video.snippet.title}</strong>
       </div>
     </div>

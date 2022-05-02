@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 
 const Searchbar = ({ handleFormSubmit }) => {
-  const [searchText, setSearchText] = useState("");
+  const [searchText, setSearchText] = useState("ipl");
   const onChange = (e) => {
     setSearchText(e.target.value);
   };
@@ -14,13 +14,17 @@ const Searchbar = ({ handleFormSubmit }) => {
   return (
     <div
       className="container"
-      style={{ padding: "10px", borderRadius: "5px", boxShadow: "1px 1px 4px" }}
+      style={{
+        padding: "1rem",
+        borderRadius: "0.5rem",
+        boxShadow: "1px 1px 4px",
+      }}
     >
       <form onSubmit={handleSubmit}>
         <label
           htmlFor="videoSearch"
           className="mx-2"
-          style={{ fontSize: "20px" }}
+          style={{ fontSize: "1.3rem" }}
         >
           <strong>Video Search:</strong>
         </label>
@@ -32,12 +36,14 @@ const Searchbar = ({ handleFormSubmit }) => {
           onChange={onChange}
           placeholder="Search on Youtube"
           style={{
-            borderRadius: "5px",
-            padding: "5px",
-            width: "400px",
-            boxShadow: "1px 1px 4px",
+            borderRadius: "0.5rem",
+            padding: "0.5rem",
+            width: "60vw",
           }}
         />
+        <button type="button" className="btn btn-danger mx-3">
+          Search
+        </button>
       </form>
     </div>
   );

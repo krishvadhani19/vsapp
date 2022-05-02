@@ -27,6 +27,7 @@ const Home = () => {
       },
     });
     setVideos(response.data.items);
+    handleVideoSelect(response.data.items[0]);
   };
 
   const handleVideoSelect = (video) => {
@@ -35,8 +36,8 @@ const Home = () => {
   return (
     <div className="container my-5">
       <Searchbar handleFormSubmit={handleSubmit} />
-      <div className="d-flex flex-row">
-        <div className="flex-grow-2">
+      <div className="d-flex flex-column">
+        <div className="">
           <VideoDetail video={selectedVideo} />
         </div>
         <div className="">

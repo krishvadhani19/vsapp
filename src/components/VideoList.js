@@ -1,5 +1,6 @@
 import React from "react";
 import VideoItem from "./VideoItem";
+import "../css/youtube.css";
 
 const VideoList = ({ videos, handleVideoSelect }) => {
   const renderedVideos = videos.map((video) => {
@@ -10,17 +11,15 @@ const VideoList = ({ videos, handleVideoSelect }) => {
         handleVideoSelect={handleVideoSelect}
       />
     );
-    console.log(video.id);
   });
   return (
     <div
-      className="my-5 align-items-center"
+      className="mb-5 align-items-center p-2 overflow-auto m-auto videoList"
       style={{
-        padding: "10px",
         borderRadius: "5px",
         boxShadow: "1px 1px 4px",
-        backgroundColor: "#323232",
-        color: "white",
+        height: "80vh",
+        width: "80vw",
       }}
     >
       {renderedVideos}
