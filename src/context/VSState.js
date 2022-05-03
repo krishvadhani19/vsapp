@@ -8,8 +8,8 @@ const VSState = (props) => {
     if (mode === "light") {
       setMode("dark");
       document.title = "vsApp - Dark Mode";
-      document.body.style.backgroundColor = "#15000F";
-      document.body.style.color = "#FF00B4";
+      document.body.style.backgroundColor = "#000613";
+      document.body.style.color = "white";
     } else {
       document.title = "vsApp - Light Mode";
       document.body.style.backgroundColor = "";

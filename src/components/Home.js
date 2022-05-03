@@ -35,6 +35,7 @@ const Home = () => {
   };
   return (
     <div className="container my-5">
+      {/* {handleSubmit("ipl")} */}
       <Searchbar handleFormSubmit={handleSubmit} />
       <div className="d-flex flex-column">
         <div className="">

@@ -20,9 +20,7 @@ const Navbar = () => {
   let location = useLocation();
   return (
     <nav
-      className={`navbar navbar-expand-lg navbar-${
-        mode === "light" ? "dark" : ""
-      } bg-${mode === "light" ? "dark" : ""}`}
+      className="navbar navbar-expand-lg navbar-dark bg-dark"
       style={{
         fontSize: "21px",
       }}
