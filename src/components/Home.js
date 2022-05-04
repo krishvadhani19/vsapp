@@ -7,6 +7,8 @@ import YoutubeAPI from "./apis/YoutubeAPI";
 import Searchbar from "./Searchbar";
 
 const Home = () => {
+  const [videos, setVideos] = useState([]);
+  const [selectedVideo, setSelectedVideo] = useState(null);
   let navigate = useNavigate();
   let token = localStorage.getItem("token");
   useEffect(() => {
@@ -17,8 +19,9 @@ const Home = () => {
     }
   }, []);
 
-  const [videos, setVideos] = useState([]);
-  const [selectedVideo, setSelectedVideo] = useState(null);
+  useEffect(() => {
+    handleSubmit("ipl");
+  }, []);
 
   const handleSubmit = async (textFromSearchbar) => {
     const response = await YoutubeAPI.get("/search", {

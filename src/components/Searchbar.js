@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 
 const Searchbar = ({ handleFormSubmit }) => {
-  const [searchText, setSearchText] = useState("ipl");
+  const [searchText, setSearchText] = useState("");
   const onChange = (e) => {
     setSearchText(e.target.value);
   };
