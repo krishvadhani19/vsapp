@@ -1,5 +1,4 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import VideoList from "./VideoList";
 import VideoDetail from "./VideoDetail";
@@ -9,15 +8,6 @@ import Searchbar from "./Searchbar";
 const Home = () => {
   const [videos, setVideos] = useState([]);
   const [selectedVideo, setSelectedVideo] = useState(null);
-  let navigate = useNavigate();
-  let token = localStorage.getItem("token");
-  useEffect(() => {
-    if (token) {
-      navigate("/");
-    } else {
-      navigate("/login");
-    }
-  }, []);
 
   useEffect(() => {
     handleSubmit("ipl");
