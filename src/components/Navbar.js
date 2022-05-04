@@ -1,21 +1,10 @@
 import React from "react";
 import Mode from "./Mode";
-import vsContext from "../context/vsContext";
-import { useContext } from "react";
 import "../css/Navbar.css";
 import { useLocation } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
-  const navigate = useNavigate();
-  const context = useContext(vsContext);
-  const { mode } = context;
-
-  const handleLogout = () => {
-    localStorage.removeItem("token");
-    navigate("/login");
-  };
-
   let location = useLocation();
   return (
     <nav
@@ -26,7 +15,7 @@ const Navbar = () => {
     >
       <div className="container-fluid">
         <a className="navbar-brand" href="/">
-          Navbar
+          vsApp
         </a>
         <button
           className="navbar-toggler"
@@ -42,9 +31,13 @@ const Navbar = () => {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="#">
-                vsApp
-              </a>
+              <Link
+                className="nav-link active"
+                aria-current="page"
+                to={`${location.pathname === "/" ? "active" : ""}`}
+              >
+                Home
+              </Link>
             </li>
           </ul>
 
