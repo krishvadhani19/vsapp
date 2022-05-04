@@ -4,7 +4,6 @@ import vsContext from "../context/vsContext";
 import { useContext } from "react";
 import "../css/Navbar.css";
 import { useLocation } from "react-router-dom";
-import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
@@ -50,28 +49,6 @@ const Navbar = () => {
           </ul>
 
           <Mode />
-          {/* Buttons */}
-          {!localStorage.getItem("token") ? (
-            <form className="d-flex mx-2">
-              <Link type="button" className="btn btn-primary mx-1" to="/login">
-                Login
-              </Link>
-              <Link type="button" className="btn btn-primary mx-1" to="/signup">
-                Signup
-              </Link>
-            </form>
-          ) : (
-            <form className="d-flex">
-              <Link
-                type="button"
-                className="btn btn-primary"
-                to="/login"
-                onClick={handleLogout}
-              >
-                Logout
-              </Link>
-            </form>
-          )}
         </div>
       </div>
     </nav>
