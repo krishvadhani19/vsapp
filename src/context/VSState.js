@@ -2,7 +2,6 @@ import React from "react";
 import vsContext from "./vsContext";
 import { useState } from "react";
 import YoutubeAPI from "../components/apis/YoutubeAPI";
-import { useEffect } from "react";
 
 const VSState = (props) => {
   const [mode, setMode] = useState("light");
