@@ -1,41 +1,18 @@
 import React from "react";
-import { useEffect, useState } from "react";
 import VideoList from "./VideoList";
 import VideoDetail from "./VideoDetail";
-import YoutubeAPI from "./apis/YoutubeAPI";
-import Searchbar from "./Searchbar";
+import vsContext from "../context/vsContext";
+import { useContext } from "react";
 
 const Home = () => {
-  const [videos, setVideos] = useState([]);
-  const [selectedVideo, setSelectedVideo] = useState(null);
-
-  const handleSubmit = async (textFromSearchbar) => {
-    const response = await YoutubeAPI.get("/search", {
-      params: {
-        q: textFromSearchbar,
-      },
-    });
-    setVideos(response.data.items);
-    handleVideoSelect(response.data.items[0]);
-  };
-
-  // useEffect(() => {
-  //   handleSubmit("ipl");
-  //   console.log("text");
-  // });
-
-  const handleVideoSelect = (video) => {
-    setSelectedVideo(video);
-  };
   return (
     <div className="my-2">
-      <Searchbar handleFormSubmit={handleSubmit} />
       <div className="d-flex flex-column">
         <div className="">
-          <VideoDetail video={selectedVideo} />
+          <VideoDetail />
         </div>
         <div>
-          <VideoList videos={videos} handleVideoSelect={handleVideoSelect} />
+          <VideoList />
         </div>
       </div>
     </div>

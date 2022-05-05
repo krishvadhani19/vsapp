@@ -3,14 +3,14 @@ import "../css/youtube.css";
 import vsContext from "../context/vsContext";
 import { useContext } from "react";
 
-const VideoDetail = ({ video }) => {
+const VideoDetail = () => {
   const context = useContext(vsContext);
-  const { mode } = context;
-  if (!video) {
+  const { mode, selectedVideo } = context;
+  if (!selectedVideo) {
     return <div>Loading</div>;
   }
 
-  const videoSrc = `https://www.youtube.com/embed/${video.id.videoId}`;
+  const videoSrc = `https://www.youtube.com/embed/${selectedVideo.id.videoId}`;
 
   return (
     <div className="mb-2 videoDetail">
@@ -19,10 +19,10 @@ const VideoDetail = ({ video }) => {
       </div>
       <div className="mx-2">
         <div className={`videoDetailTitle${mode === "light" ? "" : "-dark"}`}>
-          <strong>{video.snippet.title}</strong>
+          <strong>{selectedVideo.snippet.title}</strong>
         </div>
         <div className="videoDetailDescription">
-          {video.snippet.description}
+          {selectedVideo.snippet.description}
         </div>
       </div>
     </div>

@@ -4,9 +4,9 @@ import "../css/youtube.css";
 import vsContext from "../context/vsContext";
 import { useContext } from "react";
 
-const VideoList = ({ videos, handleVideoSelect }) => {
+const VideoList = () => {
   const context = useContext(vsContext);
-  const { mode } = context;
+  const { mode, videos, handleVideoSelect } = context;
   const renderedVideos = videos.map((video) => {
     return (
       <VideoItem

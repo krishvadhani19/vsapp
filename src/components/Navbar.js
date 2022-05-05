@@ -3,8 +3,12 @@ import Mode from "./Mode";
 import { useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
 import Searchbar from "./Searchbar";
+import vsContext from "../context/vsContext";
+import { useContext } from "react";
 
 const Navbar = () => {
+  const context = useContext(vsContext);
+  const { handleSubmit } = context;
   let location = useLocation();
   return (
     <nav
@@ -41,7 +45,7 @@ const Navbar = () => {
                 Home
               </Link>
             </li>
-            {/* <li>{<Searchbar />}</li> */}
+            <li>{<Searchbar handleFormSubmit={handleSubmit} />}</li>
           </ul>
 
           <Mode />

@@ -15,6 +15,8 @@ const VideoItem = ({ video, handleVideoSelect }) => {
         }`}
         onClick={() => {
           handleVideoSelect(video);
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
         }}
         style={{
           borderRadius: "5px",
@@ -31,6 +33,12 @@ const VideoItem = ({ video, handleVideoSelect }) => {
           <div
             className="m-auto mx-2 my-1"
             id={`videoItemTitle${mode === "light" ? "" : "-dark"}`}
+            style={{ cursor: "pointer" }}
+            onClick={() => {
+              handleVideoSelect(video);
+              document.body.scrollTop = 0;
+              document.documentElement.scrollTop = 0;
+            }}
           >
             <strong>{video.snippet.title}</strong>
           </div>

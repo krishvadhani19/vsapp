@@ -1,7 +1,21 @@
 import React from "react";
 
 const Footer = () => {
-  return <></>;
+  return (
+    <>
+      <footer
+        className="text-muted py-5"
+        style={{ marginBottom: "0px", position: "relative", color: "#ffa100" }}
+      >
+        <div className="container">
+          <p className="float-end mb-1">
+            <a href="#">Back to top</a>
+          </p>
+          <p className="mb-1">© 2022 vsApp, Inc.</p>
+        </div>
+      </footer>
+    </>
+  );
 };
 
 export default Footer;

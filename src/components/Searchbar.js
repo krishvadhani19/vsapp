@@ -17,7 +17,7 @@ const Searchbar = ({ handleFormSubmit }) => {
       onSubmit={handleSubmit}
     >
       <input
-        className="videoSearchInput-dark form-control my-2 "
+        className="videoSearchInput-dark form-control me-2 "
         type="search"
         name="videoSearch"
         id="videoSearch"
