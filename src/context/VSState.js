@@ -34,11 +34,6 @@ const VSState = (props) => {
     handleVideoSelect(response.data.items[0]);
   };
 
-  // useEffect(() => {
-  //   handleSubmit("ipl");
-  //   console.log("text");
-  // });
-
   const handleVideoSelect = (video) => {
     setSelectedVideo(video);
   };

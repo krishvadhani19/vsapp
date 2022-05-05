@@ -1,8 +1,6 @@
 import React from "react";
 import VideoList from "./VideoList";
 import VideoDetail from "./VideoDetail";
-import vsContext from "../context/vsContext";
-import { useContext } from "react";
 
 const Home = () => {
   return (
