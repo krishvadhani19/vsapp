@@ -26,8 +26,7 @@ const Searchbar = ({ handleFormSubmit }) => {
             htmlFor="videoSearch"
             className="mx-2"
             style={{ fontSize: "1.3rem" }}
-          >
-          </label>
+          ></label>
           <input
             type="text"
             name="videoSearch"

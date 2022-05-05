@@ -9,10 +9,6 @@ const Home = () => {
   const [videos, setVideos] = useState([]);
   const [selectedVideo, setSelectedVideo] = useState(null);
 
-  useEffect(() => {
-    handleSubmit("ipl");
-  }, []);
-
   const handleSubmit = async (textFromSearchbar) => {
     const response = await YoutubeAPI.get("/search", {
       params: {
@@ -22,6 +18,11 @@ const Home = () => {
     setVideos(response.data.items);
     handleVideoSelect(response.data.items[0]);
   };
+
+  useEffect(() => {
+    handleSubmit("ipl");
+    console.log("text");
+  });
 
   const handleVideoSelect = (video) => {
     setSelectedVideo(video);
