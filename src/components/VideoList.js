@@ -18,7 +18,7 @@ const VideoList = ({ videos, handleVideoSelect }) => {
   });
   return (
     <div
-      className={`mb-5 align-items-center p-2 overflow-auto m-auto videoList${
+      className={`mb-5 mt-2 align-items-center p-2 overflow-auto m-auto videoList${
         mode === "light" ? "" : "-dark"
       }`}
       style={{

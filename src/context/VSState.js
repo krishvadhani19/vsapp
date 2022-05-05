@@ -12,11 +12,12 @@ const VSState = (props) => {
       document.body.style.color = "white";
     } else {
       document.title = "vsApp - Light Mode";
-      document.body.style.backgroundColor = "";
+      document.body.style.backgroundColor = "#D9D9D9";
       document.body.style.color = "black";
       setMode("light");
     }
   };
+
   return (
     <vsContext.Provider value={{ toggleMode, mode }}>
       {props.children}

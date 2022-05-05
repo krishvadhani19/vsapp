@@ -13,22 +13,17 @@ const VideoDetail = ({ video }) => {
   const videoSrc = `https://www.youtube.com/embed/${video.id.videoId}`;
 
   return (
-    <div
-      className="my-5 mx-3 text-center iframe"
-      style={{
-        padding: "0.5rem",
-        borderRadius: "0.5rem",
-        boxShadow: "1px 1px 4px",
-      }}
-    >
-      <div>
+    <div className="mb-2 videoDetail">
+      <div className="text-center">
         <iframe src={videoSrc} allowFullScreen title="Video Player"></iframe>
       </div>
-      <div>
-        <div className={`title${mode === "light" ? "" : "-dark"}`}>
+      <div className="mx-2">
+        <div className={`videoDetailTitle${mode === "light" ? "" : "-dark"}`}>
           <strong>{video.snippet.title}</strong>
         </div>
-        <div className="description">{video.snippet.description}</div>
+        <div className="videoDetailDescription">
+          {video.snippet.description}
+        </div>
       </div>
     </div>
   );

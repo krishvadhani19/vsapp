@@ -1,8 +1,8 @@
 import React from "react";
 import Mode from "./Mode";
-import "../css/Navbar.css";
 import { useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
+import Searchbar from "./Searchbar";
 
 const Navbar = () => {
   let location = useLocation();
@@ -41,6 +41,7 @@ const Navbar = () => {
                 Home
               </Link>
             </li>
+            {/* <li>{<Searchbar />}</li> */}
           </ul>
 
           <Mode />

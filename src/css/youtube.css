@@ -1,13 +1,41 @@
-.iframe iframe {
-  width: 1100px;
-  height: 600px;
-}
-.title {
+/* Video Detail */
+.videoDetailTitle {
   font-size: 1.3rem;
 }
-.description {
+.videoDetailDescription {
   font-size: 1rem;
+  color: #5f5f5f;
 }
+
+.videoDetailTitle-dark {
+  color: #ffa100;
+}
+
+.videoDetail iframe {
+  width: 98vw;
+  height: 750px;
+}
+/*  VideoItem*/
+
+#videoItemDescription {
+  color: #5f5f5f;
+}
+#videoItemDescription-dark {
+  color: #5f5f5f;
+}
+
+.videoItem-dark {
+  background-color: #212529;
+}
+
+#videoItemTitle-dark {
+  color: #ffa100;
+}
+
+#videoItemTitle {
+  font-size: 1.1rem;
+}
+/* VideoSearch */
 .videoSearch {
   display: flex;
   flex-direction: row;
@@ -23,135 +51,142 @@
   align-items: center;
 }
 
+/* VideoList */
+
 .videoList {
-  width: "90vw";
-  /* background-color: blue; */
-}
-
-#title-dark {
-  color: #ffa100;
-}
-
-#title {
-  font-size: 1.1rem;
-}
-
-.title-dark {
-  color: #ffa100;
+  width: "75vw";
+  background-color: #d9d9d9;
+  /* border: 2px solid black; */
 }
 
 .videoList-dark {
-  border: 2px solid rgb(175, 175, 175);
+  width: "75vw";
 }
+/* Navbar */
+.btn-color {
+  background-color: #ffa100;
+}
+.btn-color:hover {
+  background-color: #212529;
+  color: #ffa100;
+  border: 1px solid #ffa100;
+}
+
 @media screen and (max-width: 1400px) {
-  .iframe iframe {
-    width: 800px;
-    height: 400px;
+  .videoDetail iframe {
+    height: 700px;
   }
 
   .videoItem {
     flex-direction: row;
+  }
+}
+@media screen and (max-width: 1300px) {
+  .videoDetail iframe {
+    height: 650px;
   }
 }
 @media screen and (max-width: 1200px) {
-  .iframe iframe {
-    width: 600px;
-    height: 300px;
-  }
-
-  .videoItem {
-    flex-direction: row;
+  .videoDetail iframe {
+    height: 600px;
   }
 }
 @media screen and (max-width: 1000px) {
-  .iframe iframe {
-    width: 500px;
-    height: 250px;
+  .videoDetail iframe {
+    height: 550px;
   }
-
-  .videoItem {
-    flex-direction: row;
+}
+@media screen and (max-width: 900px) {
+  .videoDetail iframe {
+    height: 500px;
   }
 }
 @media screen and (max-width: 800px) {
-  .iframe iframe {
-    width: 450px;
-    height: 230px;
+  .videoDetail iframe {
+    height: 450px;
+  }
+  .videoSearch {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 700px) {
+  .videoDetail iframe {
+    height: 400px;
   }
   .videoSearch {
     flex-direction: column;
   }
 
-  .videoItem {
-    flex-direction: column;
-  }
-
-  #description {
+  #videoItemDescription {
     display: none;
   }
 
-  .description {
+  #videoItemDescription-dark {
+    display: none;
+  }
+
+  .videoDetailDescription {
     display: none;
   }
 }
 @media screen and (max-width: 600px) {
-  .iframe iframe {
-    width: 400px;
-    height: 210px;
+  .videoDetail iframe {
+    height: 350px;
   }
 
   .videoItem {
+    flex-direction: column;
+  }
+
+  .videoItem-dark {
     flex-direction: column;
   }
 }
 @media screen and (max-width: 500px) {
-  .iframe iframe {
-    width: 300px;
-    height: 170px;
+  .videoDetail iframe {
+    height: 300px;
   }
-  .title {
+  .videoDetailTitle {
     font-size: 1rem;
   }
-  .description {
+  .videoDetailDescription {
     font-size: 0.8rem;
   }
-
-  .videoItem {
-    flex-direction: column;
+  #videoItemTitle {
+    font-size: 0.8rem;
   }
 }
 @media screen and (max-width: 400px) {
-  .iframe iframe {
-    width: 250px;
-    height: 120px;
+  .videoDetail iframe {
+    height: 250px;
   }
 
-  .title {
+  .videoDetailTitle {
     font-size: 1rem;
   }
-  .description {
+  .videoDetailDescription {
     font-size: 0.8rem;
   }
+}
+@media screen and (max-width: 300px) {
+  .videoDetail iframe {
+    height: 200px;
+  }
 
-  .videoItem {
-    flex-direction: column;
+  .videoDetailTitle {
+    font-size: 1rem;
+  }
+  .videoDetailDescription {
+    font-size: 0.8rem;
   }
 }
 @media screen and (max-width: 200px) {
-  .iframe iframe {
-    width: 170px;
-    height: 90px;
+  .videoDetail iframe {
+    height: 150px;
   }
 
-  .title {
-    font-size: 1rem;
-  }
-  .description {
+  .videoDetailDescription {
     font-size: 0.8rem;
     display: none;
-  }
-
-  .videoItem {
-    flex-direction: column;
   }
 }

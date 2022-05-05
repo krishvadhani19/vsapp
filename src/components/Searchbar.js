@@ -12,43 +12,24 @@ const Searchbar = ({ handleFormSubmit }) => {
     handleFormSubmit(searchText);
   };
   return (
-    <div
-      className="container"
-      style={{
-        padding: "1rem",
-        borderRadius: "0.5rem",
-        boxShadow: "1px 1px 4px",
-      }}
+    <form
+      className="d-flex videoSearch mx-2 my-2 container"
+      onSubmit={handleSubmit}
     >
-      <form className="d-flex videoSearch">
-        <div className="mx-2 d-flex">
-          <label
-            htmlFor="videoSearch"
-            className="mx-2"
-            style={{ fontSize: "1.3rem" }}
-          ></label>
-          <input
-            type="text"
-            name="videoSearch"
-            id="videoSearch"
-            value={searchText}
-            onChange={onChange}
-            placeholder="Search on Youtube"
-            style={{
-              borderRadius: "0.5rem",
-              padding: "0.1rem",
-            }}
-          />
-        </div>
-        <button
-          type="button"
-          className="btn btn-danger mx-5 my-2"
-          onClick={handleSubmit}
-        >
-          Search
-        </button>
-      </form>
-    </div>
+      <input
+        className="videoSearchInput-dark form-control my-2 "
+        type="search"
+        name="videoSearch"
+        id="videoSearch"
+        value={searchText}
+        onChange={onChange}
+        placeholder="Search"
+        aria-label="Search"
+      />
+      <button type="submit" className="btn btn-color " onClick={handleSubmit}>
+        Search
+      </button>
+    </form>
   );
 };
 
