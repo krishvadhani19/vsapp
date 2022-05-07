@@ -56,7 +56,12 @@ const VideoDetail = () => {
   return (
     <div className="mb-2 videoDetail">
       <div className="text-center">
-        <iframe id="video" src={videoSrc} frameBorder="0"></iframe>
+        <iframe
+          id="video"
+          src={videoSrc}
+          title="myFrame"
+          frameBorder="0"
+        ></iframe>
       </div>
       <div className="bittons text-center">
         <button
@@ -80,7 +85,7 @@ const VideoDetail = () => {
       </div>
       <div className="mx-2 container mx-auto">
         <div className={`videoDetailTitle${mode === "light" ? "" : "-dark"}`}>
-          {selectedVideo.snippet.title + "x"}
+          {selectedVideo.snippet.title}
         </div>
         <div className="videoDetailDescription">
           {selectedVideo.snippet.description}
