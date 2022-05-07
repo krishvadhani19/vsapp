@@ -56,7 +56,7 @@ const VideoDetail = () => {
   return (
     <div className="mb-2 videoDetail">
       <div className="text-center">
-        <iframe id="video" src={videoSrc} frameborder="0"></iframe>
+        <iframe id="video" src={videoSrc} frameBorder="0"></iframe>
       </div>
       <div className="bittons text-center">
         <button

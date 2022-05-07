@@ -13,7 +13,7 @@ const VSState = (props) => {
       document.body.style.color = "white";
     } else {
       document.title = "vsApp - Light Mode";
-      document.body.style.backgroundColor = "#f5e1ff";
+      document.body.style.backgroundColor = "#c1e1ec";
       document.body.style.color = "black";
       setMode("light");
     }
