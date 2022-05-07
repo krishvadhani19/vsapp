@@ -15,7 +15,7 @@ const VideoDetail = () => {
   return (
     <div className="mb-2 videoDetail">
       <div className="text-center">
-        <iframe src={videoSrc} allowFullScreen title="Video Player"></iframe>
+        <iframe src={videoSrc} frameborder="0"></iframe>
       </div>
       <div className="mx-2">
         <div className={`videoDetailTitle${mode === "light" ? "" : "-dark"}`}>
