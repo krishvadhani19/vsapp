@@ -80,7 +80,7 @@ const VideoDetail = () => {
       </div>
       <div className="mx-2 container mx-auto">
         <div className={`videoDetailTitle${mode === "light" ? "" : "-dark"}`}>
-          {selectedVideo.snippet.title}
+          {selectedVideo.snippet.title + "x"}
         </div>
         <div className="videoDetailDescription">
           {selectedVideo.snippet.description}

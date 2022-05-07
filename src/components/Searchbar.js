@@ -6,7 +6,7 @@ import { useContext } from "react";
 
 const Searchbar = ({ handleFormSubmit }) => {
   const context = useContext(vsContext);
-  const { mode, selectedVideo } = context;
+  const { mode } = context;
   const [searchText, setSearchText] = useState("");
   const onChange = (e) => {
     setSearchText(e.target.value);
