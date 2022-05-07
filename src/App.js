@@ -7,7 +7,7 @@ import { useEffect } from "react";
 
 function App() {
   useEffect(() => {
-    document.body.style.backgroundColor = "#D9D9D9";
+    document.body.style.backgroundColor = "#c1e1ec";
   });
 
   return (

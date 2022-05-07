@@ -18,12 +18,9 @@ const VideoList = () => {
   });
   return (
     <div
-      className={`mb-5 mt-2 align-items-center p-2 overflow-auto m-auto videoList${
+      className={` mt-2 align-items-center p-2 overflow-auto m-auto videoList${
         mode === "light" ? "" : "-dark"
       }`}
-      style={{
-        borderRadius: "0.5rem",
-      }}
     >
       {renderedVideos}
     </div>

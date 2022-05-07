@@ -10,7 +10,7 @@ const VideoItem = ({ video, handleVideoSelect }) => {
     <>
       <hr className="container" />
       <div
-        className={`my-3 p-3 d-flex container videoItem${
+        className={`my-3 d-flex container p-0 videoItem${
           mode === "light" ? "" : "-dark"
         }`}
         onClick={() => {
@@ -19,9 +19,8 @@ const VideoItem = ({ video, handleVideoSelect }) => {
           document.documentElement.scrollTop = 0;
         }}
         style={{
-          borderRadius: "5px",
-          // boxShadow: "1px 1px 4px",
-          // width: "80vw",
+          borderRadius: "0.5rem",
+          cursor: "pointer",
         }}
       >
         <img

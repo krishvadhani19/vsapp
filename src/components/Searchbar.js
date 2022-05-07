@@ -1,7 +1,12 @@
 import React from "react";
 import { useState } from "react";
+import "../css/youtube.css";
+import vsContext from "../context/vsContext";
+import { useContext } from "react";
 
 const Searchbar = ({ handleFormSubmit }) => {
+  const context = useContext(vsContext);
+  const { mode, selectedVideo } = context;
   const [searchText, setSearchText] = useState("");
   const onChange = (e) => {
     setSearchText(e.target.value);
@@ -12,10 +17,7 @@ const Searchbar = ({ handleFormSubmit }) => {
     handleFormSubmit(searchText);
   };
   return (
-    <form
-      className="d-flex videoSearch mx-2 my-2 container"
-      onSubmit={handleSubmit}
-    >
+    <form className="d-flex videoSearch mx-2 my-2 container">
       <input
         className="videoSearchInput-dark form-control me-2 "
         type="search"
@@ -26,7 +28,11 @@ const Searchbar = ({ handleFormSubmit }) => {
         placeholder="Search"
         aria-label="Search"
       />
-      <button type="submit" className="btn btn-color " onClick={handleSubmit}>
+      <button
+        type="submit"
+        className={`btn btn-color${mode === "light" ? "" : "-dark"}`}
+        onClick={handleSubmit}
+      >
         Search
       </button>
     </form>

@@ -8,7 +8,7 @@ import { useContext } from "react";
 
 const Navbar = () => {
   const context = useContext(vsContext);
-  const { handleSubmit } = context;
+  const { handleSubmit, mode } = context;
   let location = useLocation();
   return (
     <nav

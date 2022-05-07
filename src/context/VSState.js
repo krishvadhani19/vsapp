@@ -13,7 +13,7 @@ const VSState = (props) => {
       document.body.style.color = "white";
     } else {
       document.title = "vsApp - Light Mode";
-      document.body.style.backgroundColor = "#D9D9D9";
+      document.body.style.backgroundColor = "#f5e1ff";
       document.body.style.color = "black";
       setMode("light");
     }
@@ -30,6 +30,7 @@ const VSState = (props) => {
       },
     });
     setVideos(response.data.items);
+    // console.log(typeof response.data.items);
     handleVideoSelect(response.data.items[0]);
   };
 

@@ -1,21 +1,59 @@
 /* Video Detail */
 .videoDetailTitle {
-  font-size: 1.3rem;
+  font-size: 1.6rem;
 }
 .videoDetailDescription {
-  font-size: 1rem;
+  font-size: 1.3rem;
   color: #5f5f5f;
 }
 
 .videoDetailTitle-dark {
-  color: #ffa100;
+  color: #ff7f7f;
+  font-size: 1.6rem;
 }
 
 .videoDetail iframe {
-  width: 98vw;
+  width: 98.9vw;
   height: 750px;
 }
+
+/* videoDetail Button */
+.button {
+  background-color: #e8f4f8;
+  color: #212529;
+  border-radius: 0.5rem;
+  border: 0.1rem solid #add8e6;
+  box-shadow: 0.1rem 0.1rem 0.5rem;
+  width: 5rem;
+}
+.button:hover {
+  background-color: #add8e6;
+  color: #212529;
+  border-radius: 0.5rem;
+  width: 5.3rem;
+}
+.button-dark {
+  background-color: #ff7f7f;
+  border-radius: 0.5rem;
+  width: 5rem;
+}
+.button-dark:hover {
+  background-color: #000613;
+  color: #ff7f7f;
+  border: 0.1rem solid #ff7f7f;
+  border-radius: 0.5rem;
+  width: 5.1rem;
+}
 /*  VideoItem*/
+
+.videoItem {
+  background-color: #add8e6;
+  box-shadow: 0.1rem 0.1rem 0.6rem;
+}
+
+#videoItemTitle-dark {
+  color: #ff7f7f;
+}
 
 #videoItemDescription {
   color: #5f5f5f;
@@ -26,10 +64,6 @@
 
 .videoItem-dark {
   background-color: #212529;
-}
-
-#videoItemTitle-dark {
-  color: #ffa100;
 }
 
 #videoItemTitle {
@@ -55,8 +89,7 @@
 
 .videoList {
   width: "75vw";
-  background-color: #d9d9d9;
-  /* border: 2px solid black; */
+  background: linear-gradient(150deg, #e8f4f8 60%, #c1e1ec 60%);
 }
 
 .videoList-dark {
@@ -64,14 +97,29 @@
 }
 /* Navbar */
 .btn-color {
-  background-color: #ffa100;
+  background-color: #c1e1ec;
 }
 .btn-color:hover {
   background-color: #212529;
-  color: #ffa100;
-  border: 1px solid #ffa100;
+  color: #c1e1ec;
+  border: 1px solid #c1e1ec;
 }
-
+.btn-color-dark {
+  background-color: #ff7f7f;
+}
+.btn-color-dark:hover {
+  background-color: #212529;
+  color: #ff7f7f;
+  border: 1px solid #ff7f7f;
+}
+/* Home Background */
+.home-background {
+  background-color: #e8f4f8;
+}
+.home-background-dark {
+  background-color: #000613;
+}
+/*  */
 @media screen and (max-width: 1400px) {
   .videoDetail iframe {
     height: 700px;
@@ -147,46 +195,27 @@
     height: 300px;
   }
   .videoDetailTitle {
-    font-size: 1rem;
+    font-size: 1.3rem;
   }
-  .videoDetailDescription {
-    font-size: 0.8rem;
+  .videoDetailTitle-dark {
+    font-size: 1.3rem;
   }
   #videoItemTitle {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
 }
 @media screen and (max-width: 400px) {
   .videoDetail iframe {
     height: 250px;
   }
-
-  .videoDetailTitle {
-    font-size: 1rem;
-  }
-  .videoDetailDescription {
-    font-size: 0.8rem;
-  }
 }
 @media screen and (max-width: 300px) {
   .videoDetail iframe {
     height: 200px;
   }
-
-  .videoDetailTitle {
-    font-size: 1rem;
-  }
-  .videoDetailDescription {
-    font-size: 0.8rem;
-  }
 }
 @media screen and (max-width: 200px) {
   .videoDetail iframe {
     height: 150px;
-  }
-
-  .videoDetailDescription {
-    font-size: 0.8rem;
-    display: none;
   }
 }
